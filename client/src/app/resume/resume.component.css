@@ -16,3 +16,8 @@
     font-size: 18pt; 
     font-family: "Spongebob";
 }
+
+.bg-custom {
+    background-image: linear-gradient(to top, #008899 0, #001b24 100%);
+    color: white;
+}
