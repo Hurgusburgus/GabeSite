@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Resume, gabeResume } from './resume.models';
 
 @Component({
   selector: 'app-resume',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ResumeComponent implements OnInit {
 
+  resume: Resume;
+
   constructor() { }
 
+
   ngOnInit() {
+    this.resume = gabeResume;
   }
 
 }
