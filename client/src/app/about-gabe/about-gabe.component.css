@@ -1,0 +1,12 @@
+#main-jumbo {
+    background-color: rgba(0, 17, 24, 0.45);
+    color: orange;
+}
+
+#text-jumbo {
+    padding:10px;
+    background-color: rgba(0, 17, 24, 0.6);
+    color: #40d9ca;
+    font-family: "Questral", sans-serif;
+    text-align: justify;
+}

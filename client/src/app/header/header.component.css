@@ -1,0 +1,11 @@
+.bg-custom {
+    background-image: linear-gradient(to top,#001b24 0, #008899 100%);
+}
+
+.header-item {
+    color: orange !important;
+}
+
+.item-selected {
+    color: yellow !important;
+}
