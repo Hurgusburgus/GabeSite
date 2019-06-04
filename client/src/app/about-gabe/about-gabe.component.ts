@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Technology, GabeTech } from '../about-site/about-site.models';
 
 @Component({
   selector: 'app-about-gabe',
@@ -7,9 +8,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AboutGabeComponent implements OnInit {
 
+  technologies : Technology[];
+
   constructor() { }
 
   ngOnInit() {
+    this.technologies = GabeTech;
   }
 
 }
