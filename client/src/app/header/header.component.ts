@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Location } from '@angular/common';
+import {Router, NavigationEnd} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -7,9 +9,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  currentPage: string;
+
+  constructor(private router: Router, private location: Location) { 
+      router.events.subscribe((event) => {
+        (event instanceof NavigationEnd) && this.handleRouteCHange()
+      });
+   }
 
   ngOnInit() {
+    this.currentPage = this.location.path();
+  }
+
+  handleRouteCHange() {
+    this.currentPage = this.location.path();
   }
 
 }
