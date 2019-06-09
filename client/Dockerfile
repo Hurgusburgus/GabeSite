@@ -1,15 +1,18 @@
-# Stage 0, "build-stage", based on Node.js, to build and compile the frontend
-FROM tiangolo/node-frontend:10 as build-stage
-WORKDIR /app
-COPY package*.json /app/
+# Stage 1
+FROM node:11-alpine as node
+
+WORKDIR /usr/src/app
+
+COPY package*.json ./
+
 RUN npm install
-COPY ./ /app/
-ARG configuration=production
-RUN npm run build -- --output-path=./dist/out --configuration $configuration
 
-# Stage 1, based on Nginx, to have only the compiled app, ready for production with Nginx
-FROM nginx
-COPY --from=build-stage /app/dist/out/ /usr/share/nginx/html
+COPY . .
 
-# Copy the default nginx.conf provided by tiangolo/node-frontend
-COPY --from=build-stage /nginx.conf /etc/nginx/conf.d/default.conf
+RUN npm run build
+
+# Stage 2
+FROM nginx:1.16-alpine
+
+COPY --from=node /usr/src/app/dist/gabesite-client /usr/share/nginx/html
+COPY ./nginx/default.conf /etc/nginx/conf.d/default.conf
