@@ -13,7 +13,7 @@ export class AboutGabeComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.technologies = GabeTech;
+    
   }
 
 }
