@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gabesite-client
+  labels:
+    app: gabesite
+spec:
+  selector:
+    matchLabels:
+      app: gabesite
+      tier: web
+  template:
+    metadata:
+      labels:
+        app: gabesite
+        tier: web
+    spec:
+      containers:
+      - name: hello-app
+        image: gcr.io/gabesite/gabesite-client:v1.2
+        ports:
+        - containerPort: 8080
