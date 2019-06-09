@@ -51,9 +51,14 @@ export const GabeTech: Technology[] = [
         description: "An Object Relational Mapper (ORM) for ADO.NET which simplifies the mapping between objects in .NET Core and the tables in the relational database."
     },
     {
-        name: "Amazon Web Services",
-        imgSrc: "../../assets/images/aws.jpg",
-        description: "It's all hosted on Amazon's on-demand cloud computing platforms, which provides the infrustructure and services necessary to keep everything up and running."
+        name: "Kubernetes",
+        imgSrc: "../../assets/images/kubernetes.png",
+        description: "Originally designed by Google, Kubernetes is an open-source container-orchestration system for automating application deployment, scaling and management. This site uses Kubernetes to manage its docker containers in GCP"
+    },
+    {
+        name: "Google Cloud Platform",
+        imgSrc: "../../assets/images/gcp.png",
+        description: "It's all hosted on Google's on-demand cloud computing platforms, which provides the infrustructure and services necessary to keep everything up and running. GCP is quickly becoming one of the most popular cloud platforms on the web due to its easy integration with Kubernetes"
     }
 
 ];
