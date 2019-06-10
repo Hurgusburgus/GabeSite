@@ -3,16 +3,16 @@ kind: Deployment
 metadata:
   name: gabesite-web
   labels:
-    app: gabesite
+    app: gabesite-web
 spec:
   selector:
     matchLabels:
-      app: gabesite
+      app: gabesite-web
       tier: web
   template:
     metadata:
       labels:
-        app: gabesite
+        app: gabesite-client
         tier: web
     spec:
       containers:
