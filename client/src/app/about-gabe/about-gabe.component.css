@@ -2,6 +2,7 @@
     background-color: rgba(0, 17, 24, 0.45);
     color: orange;
     font-family: "Spongebob", sans-serif;
+    text-align: center;
 }
 
 .text-jumbo {
@@ -10,4 +11,10 @@
     color: #40d9ca;
     font-family: "Questral", sans-serif;
     text-align: justify;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    width: auto\9;
 }
