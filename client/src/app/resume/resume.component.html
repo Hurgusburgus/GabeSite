@@ -23,8 +23,8 @@
     </div>
     <div class="col-lg-9 col-xl-10 text-jumbo"> 
         <div *ngFor="let work of resume.works">
-          <p><strong>{{work.date}} - {{work.position}} - <a href="{{work.href}}">{{work.company}}</a> </strong> <span style="font-weight: 400; float: right;"> 
-            {{work.location}}</span></p>
+          <p><strong><a href="{{work.href}}">{{work.company}}</a> - {{work.position}}</strong> <span style="font-weight: 400; float: right;"> 
+            {{work.date}} - {{work.location}}</span></p>
     <ul *ngFor="let d of work.descriptions">
       <li style="font-weight: 400;"><span style="font-weight: 400;">{{d}}</span></li>
     </ul>
