@@ -16,7 +16,7 @@ spec:
         tier: web
     spec:
       containers:
-      - name: hello-app
-        image: gcr.io/gabesite/gabesite-client:v1.2
+      - name: gabesite-client
+        image: gcr.io/gabesite/gabesite-client:v1.3
         ports:
         - containerPort: 8080
