@@ -12,7 +12,7 @@ spec:
   template:
     metadata:
       labels:
-        app: gabesite-client
+        app: gabesite-web
         tier: web
     spec:
       containers:
