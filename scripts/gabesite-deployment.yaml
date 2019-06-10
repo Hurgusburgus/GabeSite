@@ -3,20 +3,20 @@ kind: Deployment
 metadata:
   name: gabesite-web
   labels:
-    app: gabesite-web
+    app: gabesite
 spec:
   selector:
     matchLabels:
-      app: gabesite-web
+      app: gabesite
       tier: web
   template:
     metadata:
       labels:
-        app: gabesite-web
+        app: gabesite
         tier: web
     spec:
       containers:
       - name: gabesite-client
-        image: gcr.io/gabesite/gabesite-client:v1.3
+        image: gcr.io/gabesite/gabesite-client:v1.4
         ports:
         - containerPort: 8080
