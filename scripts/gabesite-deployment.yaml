@@ -17,6 +17,6 @@ spec:
     spec:
       containers:
       - name: gabesite-client
-        image: gcr.io/gabesite/gabesite-client:v1.4
+        image: gcr.io/gabesite/gabesite-client:v1.4.1
         ports:
         - containerPort: 8080
