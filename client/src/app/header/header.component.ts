@@ -25,4 +25,8 @@ export class HeaderComponent implements OnInit {
     this.currentPage = this.location.path();
   }
 
+  collapse() {
+
+  }
+
 }

@@ -11,6 +11,7 @@ import { AboutGabeComponent } from './about-gabe/about-gabe.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutSiteComponent } from './about-site/about-site.component';
 import { ResumeComponent } from './resume/resume.component';
+import { CloseMenuDirective } from './header/closeMenu.directive';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { ResumeComponent } from './resume/resume.component';
     AboutGabeComponent,
     FooterComponent,
     AboutSiteComponent,
-    ResumeComponent
+    ResumeComponent,
+    CloseMenuDirective
   ],
   imports: [
     BrowserModule,
